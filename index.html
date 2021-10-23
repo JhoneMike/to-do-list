@@ -34,10 +34,28 @@
 
             <div class="todo-body">
                 <div class="tasks">
-                    
+                    <div class="task">
+                        <input type="checkbox" id="task-1"/>
+                        <label for="task-1"><span class="custom-checkbox"></span>record todo list video</label>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox" id="task-2"/>
+                        <label for="task-2"><span class="custom-checkbox"></span>another task</label>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox" id="task-3"/>
+                        <label for="task-3"><span class="custom-checkbox"></span>a third task</label>
+                    </div>
                 </div>
 
-                <div class="new-task-creator"></div>
+                <div class="new-task-creator">
+                    <form action="">
+                        <input type="text" class="new list" placeholder="new task name" aria-label="new task name"/>
+                        <button class="btn task" aria-label="create new task">+</button>
+                    </form>
+                </div>
 
                 <div class="delete-stuff"></div>
             </div>
