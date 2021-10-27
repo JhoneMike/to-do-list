@@ -1,68 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=width.device">
 
-        <title>To-do List</title>
+		<title>To-Do List</title>
 
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1 class="title">Atividades do dia</h1>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+        <h1 class="titulo-principal">Tarefas do dia</h1>
 
-        <div class="all-tasks">
-            <h2 class="task-list-title">My lists</h2>
-            <ul class="task-list">
-                <li class="list-name active-list">You</li>
-                <li class="list-name">Work</li>
-                <li class="list-name">Grocery</li>
+        <div class="tarefas-do-dia">
+            <h2 class="titulo-tarefas">Lista</h2>
+            <ul class="lista-de-tarefas">
+                <li class="nome-lista lista-ativa">Estudar</li>
+                <li class="nome-lista">Trabalhar</li>
+                <li class="nome-lista">Atividade Física</li>
             </ul>
 
             <form action="">
-                <input type="text" class="new list" placeholder="new list name" aria-label="new list name"/>
-                <button class="btn create" aria-label="create new list">+</button>
+                <input type="text" class="nova lista" placeholder="nova lista" aria-label="nova lista nome"/>
+                <button class="btn adicionar" aria-label="criar nova lista">+</button>
             </form>
         </div>
 
-        <div class="todo-list">
-            <div class="todo-header">
-                <h2 class="list-title">You</h2>
-                <p class="task-count">3 task remaining</p>
+        <div class="lista-afazeres">
+            <div class="header-afazeres">
+                <h2 class="titulo-principal-lista">Estudar</h2>
+                <p class="total-de-tarefas">3 tarefas no total</p>
             </div>
 
 
-            <div class="todo-body">
-                <div class="tasks">
-                    <div class="task">
-                        <input type="checkbox" id="task-1"/>
-                        <label for="task-1"><span class="custom-checkbox"></span>record todo list video</label>
+            <div class="body-afazeres">
+                <div class="tarefas">
+                    <div class="tarefa">
+                        <input type="checkbox" id="tarefa-1"/>
+                        <label for="tarefa-1"><span class="custom-checkbox"></span>HTML</label>
                     </div>
 
-                    <div class="task">
-                        <input type="checkbox" id="task-2"/>
-                        <label for="task-2"><span class="custom-checkbox"></span>another task</label>
+                    <div class="tarefa">
+                        <input type="checkbox" id="tarefa-2"/>
+                        <label for="tarefa-2"><span class="custom-checkbox"></span>CSS</label>
                     </div>
 
-                    <div class="task">
-                        <input type="checkbox" id="task-3"/>
-                        <label for="task-3"><span class="custom-checkbox"></span>a third task</label>
+                    <div class="tarefa">
+                        <input type="checkbox" id="tarefa-3"/>
+                        <label for="tarefa-3"><span class="custom-checkbox"></span>JavaScript</label>
                     </div>
                 </div>
 
-                <div class="new-task-creator">
+                <div class="adicionar-nova-tarefa">
                     <form action="">
-                        <input type="text" class="new task" placeholder="new task name" aria-label="new task name"/>
-                        <button class="btn create" aria-label="create new task">+</button>
+                        <input type="text" class="nova tarefa" placeholder="nova tarefa" aria-label="nova tarefa nome"/>
+                        <button class="btn adicionar" aria-label="adicionar nova tarefa">+</button>
                     </form>
                 </div>
 
-                <div class="delete-stuff">
-                    <button class="btn delete">Clear completed tasks</button>
-                    <button class="btn delete">Delete list</button>
+                <div class="deletar">
+                    <button class="btn delete">Limpar atividades realizadas</button>
+                    <button class="btn delete">Deletar lista</button>
                 </div>
             </div>
         </div>
-
     </body>
 </html>

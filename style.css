@@ -1,9 +1,4 @@
-:root{
-    --clr-primary: rgb(54, 112, 199);
-    --clr-light: #f4f4f4;
-    --clr-dark: #333;
-    --clr-warning: rgb(99, 36, 36);
-}
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
 
 *,
 *::before,
@@ -14,11 +9,11 @@
 
 body{
     margin: 0;
-    font-family: "Work Sans", sans-serif;
+    font-family: 'Zen Old Mincho', sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
-    background-color: var(--clr-primary);
-    color: var(--clr-light);
+    background-color: rgb(255, 255, 255);
+    color: #000000;
 
     display: grid;
     grid:
@@ -27,7 +22,7 @@ body{
         1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
 }
 
-.title{
+.titulo-principal{
     grid-area: header;
     text-align: center;
     font-size: calc(7vw + 2rem);
@@ -37,22 +32,22 @@ body{
     margin: -0.3em 0 0.5em;
 }
 
-.all-tasks{
+.tarefas-do-dia{
     grid-area: lists;
 }
 
-.task-list{
+.lista-de-tarefas{
     font-size: 1.2rem;
     line-height: 1.7;
     list-style: circle;
     padding-left: 1.1em;
 }
 
-.list-name{
+.nome-lista{
     cursor: pointer;
 }
 
-.list-name:hover{
+.nome-lista:hover{
     opacity: 0.7;
 }
 
@@ -65,31 +60,31 @@ form{
     background: 0;
     border: 0;
     padding: 0;
-    color: inherit;
+    color: #000000;
 }
 
-.btn.create{
+.btn.adicionar{
     font-size: 1.5rem;
     font-weight: 900;
     margin-right: 0.25em;
     transition: opacity 250ms ease-in;
 }
 
-.btn.create:hover{
+.btn.adicionar:hover{
     opacity: 0.7;
 }
 
-.btn.delete{
+.btn.deletar{
     opacity: 0.7;
     font-size: 1rem;
     transition: color 200ms;
 }
 
-.btn.delete:hover{
-    color: var(--clr-warning);
+.btn.deletar:hover{
+    color: rgb(99, 36, 36);
 }
 
-.new{
+.nova{
     background: transparent;
     border: 0;
     color: inherit;
@@ -102,23 +97,23 @@ form{
     order: 2;
 }
 
-.new::placeholder{
-    opacity: 0.4;
+.nova::placeholder{
+    opacity: 0.9;
 }
 
-.new:focus{
+.nova:focus{
     border-bottom: 3px;
 }
 
-.new:focus::placeholder{
+.nova:focus::placeholder{
     opacity: 0.15;
 }
 
-.new.list{
+.nova.lista{
     font-size: 1.1rem;
 }
 
-.new.task{
+.nova.tarefa{
     margin-bottom: 0;
 }
 
@@ -126,38 +121,39 @@ form{
     font-weight: 700;
 }
 
-.todo-list{
+.lista-afazeres{
     --spacer: 2rem;
     
     grid-area: active;
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: #f4f4f4;
+    color: #333;
 }
 
-.todo-header{
+.header-afazeres{
     padding: var(--spacer);
-    background: #e4e4e4;
+    background: #CCCCCC;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    flex-direction: column;
 }
 
-.list-title{
+.titulo-principal-lista{
     margin: 0 1em 0 0;
 }
 
-.task-count{
+.total-de-tarefas{
     margin: 0;
     font-size: 1rem;
 }
 
-.todo-body{
+.body-afazeres{
     padding: var(--spacer);
     position: relative;
 }
 
-.new-task-creator .create{
-    color: var(--clr-primary);
+.adicionar-nova-tarefa .adicionar{
+    color: rgb(54, 112, 199);
 }
 
 [type="checkbox"]{
@@ -165,19 +161,19 @@ form{
     position: absolute;
 }
 
-.task label{
+.tarefa label{
     display: inline-flex;
     align-items: center;
     position: relative;
 
 }
 
-.task{
+.tarefa{
     position: relative;
     margin-bottom: 1.25em;
 }
 
-.task::after{
+.tarefa::after{
     content: "";
     position: absolute;
     right: 0;
@@ -201,14 +197,14 @@ form{
     transition: transform 300ms ease-in-out;
 }
 
-.task:hover .custom-checkbox, [type="checkbox"]:focus + label .custom-checkbox{
+.tarefa:hover .custom-checkbox, [type="checkbox"]:focus + label .custom-checkbox{
     transform: scale(1.2);
-    color: var(--clr-primary);
+    color: rgb(54, 112, 199);
 }
 
 [type="checkbox"]:checked + label .custom-checkbox{
-    background: var(--clr-primary);
-    border-color: var(--clr-primary);
+    background: rgb(54, 112, 199);
+    border-color: rgb(54, 112, 199);
     box-shadow: inset 0 0 0px 2px white;
 }
 
@@ -216,7 +212,7 @@ form{
     opacity: 0.5;
 }
 
-.task label::after{
+.tarefa label::after{
     content: '';
     position: absolute;
     left: 0;
@@ -235,12 +231,12 @@ form{
     transform-origin: left;
 }
 
-.delete-stuff{
+.deletar{
     display: flex;
     justify-content: space-evenly;
     position: absolute;
     width: 100%;
     left: 0;
     bottom: -35px;
-    color: var(--clr-light);
+    color: #f4f4f4;
 }
