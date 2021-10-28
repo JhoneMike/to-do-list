@@ -12,7 +12,9 @@ body{
     font-family: 'Zen Old Mincho', sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
-    background-color: rgb(255, 255, 255);
+    background: radial-gradient(rgb(25, 224, 25) 10%,rgb(2, 94, 2) 75%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #000000;
 
     display: grid;
@@ -229,6 +231,7 @@ form{
 [type="checkbox"]:checked + label::after{
     transform: scaleX(1);
     transform-origin: left;
+    background: red;
 }
 
 .deletar{
